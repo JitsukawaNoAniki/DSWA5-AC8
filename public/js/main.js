@@ -10,6 +10,11 @@ angular.module('ifsp', ['ngRoute', 'ngResource']).config(function($routeProvider
         controller: 'ContatoController'
     });
 
+    $routeProvider.when('/contato', {
+        templateUrl: 'partials/contato.html',
+        controller: 'ContatoController'
+    });
+
     $routeProvider.when('/cursos', {
         templateUrl: 'partials/cursos.html',
         controller: 'CursosController'
@@ -20,11 +25,10 @@ angular.module('ifsp', ['ngRoute', 'ngResource']).config(function($routeProvider
         controller: 'CursoController'
     });
 
-    $routeProvider.when('/contato', {
-        templateUrl: 'partials/contato.html',
-        controller: 'ContatoController'
+    $routeProvider.when('/curso', {
+        templateUrl: 'partials/curso.html',
+        controller: 'CursoController'
     });
-
 
 
     $routeProvider.otherwise({ redirectTo: '/contatos' });
